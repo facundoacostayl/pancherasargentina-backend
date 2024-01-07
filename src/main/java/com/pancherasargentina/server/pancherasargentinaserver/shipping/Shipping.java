@@ -1,5 +1,7 @@
 package com.pancherasargentina.server.pancherasargentinaserver.shipping;
 
+import java.time.LocalDate;
+
 public class Shipping {
     private Long id;
     private String clientName;
@@ -10,9 +12,11 @@ public class Shipping {
     private String door;
     private String city;
 
+    private LocalDate date;
+
     public Shipping(){};
 
-    public Shipping(Long id, String clientName, String email, String phone, String shippingType, String address, String door, String city) {
+    public Shipping(Long id, String clientName, String email, String phone, String shippingType, String address, String door, String city, LocalDate date) {
         this.id = id;
         this.clientName = clientName;
         this.email = email;
@@ -21,9 +25,10 @@ public class Shipping {
         this.address = address;
         this.door = door;
         this.city = city;
+        this.date = date;
     }
 
-    public Shipping(String clientName, String email, String phone, String shippingType, String address, String door, String city) {
+    public Shipping(String clientName, String email, String phone, String shippingType, String address, String door, String city, LocalDate date) {
         this.clientName = clientName;
         this.email = email;
         this.phone = phone;
@@ -31,6 +36,7 @@ public class Shipping {
         this.address = address;
         this.door = door;
         this.city = city;
+        this.date = date;
     }
 
     public Long getId() {
@@ -97,6 +103,14 @@ public class Shipping {
         this.city = city;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "Shipping{" +
@@ -108,6 +122,7 @@ public class Shipping {
                 ", address='" + address + '\'' +
                 ", door='" + door + '\'' +
                 ", city='" + city + '\'' +
+                ", date=" + date +
                 '}';
     }
 }
