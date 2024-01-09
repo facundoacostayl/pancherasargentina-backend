@@ -28,7 +28,6 @@ public class Shipping {
     private String address;
     private String door;
     private String city;
-
     private LocalDate date;
 
     public Shipping(){};
