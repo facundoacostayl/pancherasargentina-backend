@@ -1,8 +1,25 @@
 package com.pancherasargentina.server.pancherasargentinaserver.shipping;
 
+
+
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "shipping")
 public class Shipping {
+    @Id
+    @SequenceGenerator(
+            name = "shipping_sequence",
+            sequenceName = "shipping_sequence",
+            allocationSize = 1
+
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "shipping_sequence"
+    )
     private Long id;
     private String clientName;
     private String email;
