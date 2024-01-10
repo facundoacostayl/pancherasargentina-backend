@@ -1,7 +1,5 @@
 package com.pancherasargentina.server.pancherasargentinaserver.shipping;
 
-
-
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
