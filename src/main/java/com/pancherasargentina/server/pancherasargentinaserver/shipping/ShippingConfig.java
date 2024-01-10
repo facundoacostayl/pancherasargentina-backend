@@ -10,21 +10,10 @@ import java.util.List;
 
 @Configuration
 public class ShippingConfig {
-    @Bean
-    CommandLineRunner commandLineRunner(ShippingRepository repository) {
-        return args -> {
-            Shipping facundoShipping = new Shipping(
-                    "Facundo",
-                    "facundo@facundo.com",
-                    "1122334455",
-                    "Correo",
-                    "Siempre Viva 1234",
-                    "2 ° A",
-                    "GBA",
-                    LocalDate.of(2000, Month.JANUARY, 5)
-            );
 
-            repository.saveAll(List.of(facundoShipping));
-        };
-    }
+    /*@Bean
+    CommandLineRunner commandLineRunner(ShippingRepository shippingRepository) {
+        return args -> {}
+    }*/
+
 }

@@ -3,16 +3,24 @@ package com.pancherasargentina.server.pancherasargentinaserver.product;
 import jakarta.persistence.*;
 
 @Entity
-@Table (name="product")
+@Table (name = "product")
 public class Product {
     @Id
-    @SequenceGenerator(name="product_sequence", sequenceName ="product_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator ="product_sequence")
+    @SequenceGenerator(
+            name = "product_sequence",
+            sequenceName = "product_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "product_sequence"
+    )
     private Long id;
     private String name;
     private String description;
     private Number price;
     private String productType;
+
+    public Product(){};
 
     public Product(Long id, String name, String description, Number price, String productType) {
         this.id = id;
