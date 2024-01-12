@@ -14,9 +14,9 @@ public class EmailService {
     public void sendEmail(Email email) {
         SimpleMailMessage mail = new SimpleMailMessage();
         mail.setFrom("facundoacostayl@gmail.com");
-        mail.setTo(email.getReceiverEmail());
-        mail.setSubject(email.getSubject());
-        mail.setText(email.getMessage());
+        mail.setTo("facundoacostayl@gmail.com");
+        mail.setSubject("CONSULTA WEB: " + email.getSubject());
+        mail.setText("Esta consulta recibida mediante la Web pancherasargentina.com es del cliente con el correo: " + email.getClientEmail() + "\n\n" + email.getMessage());
 
         mailSender.send(mail);
     }
