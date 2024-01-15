@@ -1,10 +1,15 @@
 package com.pancherasargentina.server.pancherasargentinaserver.email;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class Email {
     private String senderEmail;
     private String receiverEmail;
+    @NotBlank(message = "ClientEmail is mandatory")
     private String clientEmail;
+    @NotBlank
     private String subject;
+    @NotBlank
     private String message;
 
     public Email(){}

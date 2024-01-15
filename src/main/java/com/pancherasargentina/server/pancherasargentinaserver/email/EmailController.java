@@ -1,5 +1,6 @@
 package com.pancherasargentina.server.pancherasargentinaserver.email;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +21,7 @@ public class EmailController
 
     @PostMapping
     public void sendEmail(
-            @RequestBody Email email) {
+        @Valid @RequestBody Email email) {
         emailService.sendEmail(email);
     }
 }
