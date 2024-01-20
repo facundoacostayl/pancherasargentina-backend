@@ -1,4 +1,4 @@
-package com.pancherasargentina.server.pancherasargentinaserver;
+package com.pancherasargentina.server.pancherasargentinaserver.orderItem;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

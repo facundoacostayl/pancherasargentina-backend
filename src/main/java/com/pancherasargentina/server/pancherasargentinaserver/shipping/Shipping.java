@@ -25,12 +25,12 @@ public class Shipping {
     private String shippingType;
     private String address;
     private String door;
-    private String city;
+    private String shippingLocationId;
     private LocalDate date;
 
     public Shipping(){};
 
-    public Shipping(Long id, String clientName, String email, String phone, String shippingType, String address, String door, String city, LocalDate date) {
+    public Shipping(Long id, String clientName, String email, String phone, String shippingType, String address, String door, String shippingLocationId, LocalDate date) {
         this.id = id;
         this.clientName = clientName;
         this.email = email;
@@ -38,18 +38,18 @@ public class Shipping {
         this.shippingType = shippingType;
         this.address = address;
         this.door = door;
-        this.city = city;
+        this.shippingLocationId = shippingLocationId;
         this.date = date;
     }
 
-    public Shipping(String clientName, String email, String phone, String shippingType, String address, String door, String city, LocalDate date) {
+    public Shipping(String clientName, String email, String phone, String shippingType, String address, String door, String shippingLocationId, LocalDate date) {
         this.clientName = clientName;
         this.email = email;
         this.phone = phone;
         this.shippingType = shippingType;
         this.address = address;
         this.door = door;
-        this.city = city;
+        this.shippingLocationId = shippingLocationId;
         this.date = date;
     }
 
@@ -109,12 +109,12 @@ public class Shipping {
         this.door = door;
     }
 
-    public String getCity() {
-        return city;
+    public String getShippingLocationId() {
+        return shippingLocationId;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setShippingLocationId(String shippingLocationId) {
+        this.shippingLocationId = shippingLocationId;
     }
 
     public LocalDate getDate() {
@@ -135,7 +135,7 @@ public class Shipping {
                 ", shippingType='" + shippingType + '\'' +
                 ", address='" + address + '\'' +
                 ", door='" + door + '\'' +
-                ", city='" + city + '\'' +
+                ", shippingLocationId='" + shippingLocationId + '\'' +
                 ", date=" + date +
                 '}';
     }

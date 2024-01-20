@@ -1,4 +1,4 @@
-package com.pancherasargentina.server.pancherasargentinaserver;
+package com.pancherasargentina.server.pancherasargentinaserver.shippingLocation;
 
 import jakarta.persistence.*;
 
