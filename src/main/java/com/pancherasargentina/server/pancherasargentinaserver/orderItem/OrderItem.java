@@ -1,11 +1,15 @@
 package com.pancherasargentina.server.pancherasargentinaserver.orderItem;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table (name = "orderItem")
 public class OrderItem {
+    @Id
+    @SequenceGenerator(name = "orderItem_sequence", sequenceName = "orderItem_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderItem_sequence")
+    private Long id;
+
     private Long orderId;
     private Long productId;
     private Integer quantity;

@@ -20,6 +20,11 @@ public class ShippingLocation {
         this.shippingPrice = shippingPrice;
     }
 
+    public ShippingLocation(String locationName, Integer shippingPrice) {
+        this.locationName = locationName;
+        this.shippingPrice = shippingPrice;
+    }
+
     public Long getId() {
         return id;
     }
