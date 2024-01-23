@@ -21,4 +21,14 @@ public class ShippingController {
     public List<Shipping>getShippings() {
         return shippingService.getShippings();
     }
+
+    @PostMapping
+    public Shipping addShipping(@RequestBody Shipping shipping) {
+        return shippingService.addShipping(shipping);
+    }
+
+    @PutMapping("{id}")
+    public Shipping updateShipping(@PathVariable long id, @RequestBody Shipping shipping) {
+        return shippingService.updateShipping(id, shipping);
+    }
 }
