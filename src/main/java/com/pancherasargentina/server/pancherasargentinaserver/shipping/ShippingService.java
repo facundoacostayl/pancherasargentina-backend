@@ -26,7 +26,7 @@ public class ShippingService {
     public Shipping addShipping(Shipping shipping) { return shippingRepository.save(shipping); }
 
     public Shipping updateShipping(long id, Shipping shipping) {
-        Shipping shippingToUpdate = shippingRepository.findById(id);
+        Shipping shippingToUpdate = shippingRepository.findById(id).orElseThrow();
 
         shippingToUpdate.setClientName(shipping.getClientName());
 
