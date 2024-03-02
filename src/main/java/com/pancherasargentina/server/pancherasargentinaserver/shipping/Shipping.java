@@ -2,8 +2,6 @@ package com.pancherasargentina.server.pancherasargentinaserver.shipping;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
-
 @Entity
 @Table(name = "shipping")
 public class Shipping {
@@ -26,11 +24,10 @@ public class Shipping {
     private String address;
     private String door;
     private String shippingLocationId;
-    private LocalDate date;
 
     public Shipping(){};
 
-    public Shipping(Long id, String clientName, String email, String phone, String shippingType, String address, String door, String shippingLocationId, LocalDate date) {
+    public Shipping(Long id, String clientName, String email, String phone, String shippingType, String address, String door, String shippingLocationId) {
         this.id = id;
         this.clientName = clientName;
         this.email = email;
@@ -39,10 +36,9 @@ public class Shipping {
         this.address = address;
         this.door = door;
         this.shippingLocationId = shippingLocationId;
-        this.date = date;
     }
 
-    public Shipping(String clientName, String email, String phone, String shippingType, String address, String door, String shippingLocationId, LocalDate date) {
+    public Shipping(String clientName, String email, String phone, String shippingType, String address, String door, String shippingLocationId) {
         this.clientName = clientName;
         this.email = email;
         this.phone = phone;
@@ -50,7 +46,6 @@ public class Shipping {
         this.address = address;
         this.door = door;
         this.shippingLocationId = shippingLocationId;
-        this.date = date;
     }
 
     public Long getId() {
@@ -117,14 +112,6 @@ public class Shipping {
         this.shippingLocationId = shippingLocationId;
     }
 
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
     @Override
     public String toString() {
         return "Shipping{" +
@@ -136,7 +123,6 @@ public class Shipping {
                 ", address='" + address + '\'' +
                 ", door='" + door + '\'' +
                 ", shippingLocationId='" + shippingLocationId + '\'' +
-                ", date=" + date +
                 '}';
     }
 }

@@ -20,21 +20,25 @@ public class Product {
     private Number price;
     private String productType;
 
+    private String imageUrl;
+
     public Product(){};
 
-    public Product(Long id, String name, String description, Number price, String productType) {
+    public Product(Long id, String name, String description, Number price, String productType, String imageUrl) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.productType = productType;
+        this.imageUrl = imageUrl;
     }
 
-    public Product(String name, String description, Number price, String productType) {
+    public Product(String name, String description, Number price, String productType, String imageUrl) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.productType = productType;
+        this.imageUrl = imageUrl;
     }
 
     public Long getId() {
@@ -77,6 +81,14 @@ public class Product {
         this.productType = productType;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -85,6 +97,7 @@ public class Product {
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 ", productType='" + productType + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
 }
