@@ -14,10 +14,10 @@ public class OrderItemController {
     @Autowired
     public OrderItemController(OrderItemService orderItemService ) { this.orderItemService = orderItemService; }
 
-    @GetMapping("{id}")
+    /*@GetMapping("{id}")
     public List<OrderItem> getOrderItemsByOrderId(@PathVariable Long id) {
         return orderItemService.getOrderItemsByOrderId(id);
-    }
+    }*/
 
     public OrderItem addOrderItem(@RequestBody OrderItem orderItem) {
         return orderItemService.addOrderItem(orderItem);

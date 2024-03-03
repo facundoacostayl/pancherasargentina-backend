@@ -12,9 +12,9 @@ public class OrderItemService {
     @Autowired
     public OrderItemService(OrderItemRepository orderItemRepository) { this.orderItemRepository = orderItemRepository; }
 
-    public List<OrderItem>getOrderItemsByOrderId(Long id) {
+    /*public List<OrderItem>getOrderItemsByOrderId(Long id) {
         return orderItemRepository.findByOrderIdIn(id);
-    }
+    }*/
 
     public OrderItem addOrderItem(OrderItem orderItem) {
         return orderItemRepository.save(orderItem);

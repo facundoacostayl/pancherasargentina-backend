@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table (name = "order")
+@Table (name = "`order`")
 public class Order {
     @Id
     @SequenceGenerator(name = "order_sequence", sequenceName = "order_sequence", allocationSize = 1)

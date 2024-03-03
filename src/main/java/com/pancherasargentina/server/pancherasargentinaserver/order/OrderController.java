@@ -1,6 +1,5 @@
 package com.pancherasargentina.server.pancherasargentinaserver.order;
 
-import com.pancherasargentina.server.pancherasargentinaserver.shipping.Shipping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
