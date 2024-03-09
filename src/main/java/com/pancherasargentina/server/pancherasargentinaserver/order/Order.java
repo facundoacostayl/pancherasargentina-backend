@@ -1,8 +1,10 @@
 package com.pancherasargentina.server.pancherasargentinaserver.order;
 
+import com.pancherasargentina.server.pancherasargentinaserver.orderItem.OrderItem;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table (name = "`order`")
@@ -15,6 +17,8 @@ public class Order {
     private Integer orderTotal;
     private String status;
     private LocalDate date;
+    @OneToMany(mappedBy = "`order`")
+    private Set<OrderItem> orderItems;
 
     public Order() {}
 
@@ -65,5 +69,13 @@ public class Order {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public Set<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(Set<OrderItem> orderItems) {
+        this.orderItems = orderItems;
     }
 }
