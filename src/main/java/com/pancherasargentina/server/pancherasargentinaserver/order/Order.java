@@ -17,7 +17,7 @@ public class Order {
     private Integer orderTotal;
     private String status;
     private LocalDate date;
-    @OneToMany(mappedBy = "`order`")
+    @OneToMany(mappedBy = "order")
     private Set<OrderItem> orderItems;
 
     public Order() {}

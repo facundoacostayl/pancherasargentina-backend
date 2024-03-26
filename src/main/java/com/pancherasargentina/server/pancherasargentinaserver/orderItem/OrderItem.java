@@ -1,5 +1,6 @@
 package com.pancherasargentina.server.pancherasargentinaserver.orderItem;
 
+import com.pancherasargentina.server.pancherasargentinaserver.order.Order;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,24 +11,26 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderItem_sequence")
     private Long id;
 
-    private Long orderId;
+    @ManyToOne
+    @JoinColumn(name="orderId", nullable=false)
+    private Order order;
     private Long productId;
     private Integer quantity;
 
     public OrderItem() {}
 
-    public OrderItem(Long orderId, Long productId, Integer quantity) {
-        this.orderId = orderId;
+    public OrderItem(Order order, Long productId, Integer quantity) {
+        this.order = order;
         this.productId = productId;
         this.quantity = quantity;
     }
 
-    public Long getOrderId() {
-        return orderId;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public Long getProductId() {
